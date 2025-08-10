@@ -4,6 +4,7 @@ const connectDB = require('./config/database');
 const healthRouter = require('./routes/health');
 const authRouter = require('./routes/auth');
 const productRouter = require('./routes/product');
+const cartRouter = require('./routes/cart');
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use(express.json());
 app.use('/health', healthRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
+app.use('/api/cart', cartRouter);
 
 module.exports = app;
